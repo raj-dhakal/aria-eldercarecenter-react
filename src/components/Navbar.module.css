@@ -5,6 +5,15 @@
   padding: 16px 80px;
   background-color: lightgray;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 100px;
+}
 
 .navLinks {
   display: flex;
@@ -13,10 +22,10 @@
 }
 
 .callButton {
-    background-color: var(--green-dark);
-    color: var(--white);
-    padding: 10px 24px;
-    border-radius: 50px;
+  background-color: var(--green-dark);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 50px;
 }
 .callButton:hover {
   background-color: #244a37;
