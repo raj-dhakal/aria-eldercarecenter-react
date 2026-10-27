@@ -18,3 +18,16 @@
     padding: 10px 24px;
     border-radius: 50px;
 }
+.callButton:hover {
+  background-color: #244a37;
+}
+
+.navLinks a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.navLinks a:hover {
+  color: var(--green-dark);
+}
