@@ -1,4 +1,5 @@
 .navbar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,4 +40,32 @@
 
 .navLinks a:hover {
   color: var(--green-dark);
+}
+
+.menuButton {
+  background: none;
+  display: none;
+  border: none;
+  font-size: 28px;
+  color: var(--green-dark);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  .open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: lightgray;
+    padding: 16px 24px;
+  }
+  .menuButton {
+    display: block;
+  }
 }

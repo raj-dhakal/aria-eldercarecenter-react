@@ -1,6 +1,8 @@
 import styles from "./Navbar.module.css";
 import logo from "../assets/aecc-logo.svg";
+import { useState } from "react";
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -11,7 +13,7 @@ function Navbar() {
         </div>
       </div>
 
-      <ul className={styles.navLinks}>
+      <ul className={menuOpen ? `${styles.navLinks} ${styles.open}` : styles.navLinks}>
         <li>
           <a href="#">Home</a>
         </li>
@@ -35,8 +37,14 @@ function Navbar() {
       <a href="#" className={styles.callButton}>
         Call Us
       </a>
+      <button
+        className={styles.menuButton}
+        aria-label="Open menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
     </nav>
   );
 }
-
 export default Navbar;
